@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>URL Shortener</title>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+		/>
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="{{ url_for('static', filename='css/styles.css')}}"
+		/>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+			crossorigin="anonymous"
+		></script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-10 col-xl-9 mx-auto" id="wholecard">
+					<div
+						class="card flex-row my-5 border-0 shadow rounded-5 overflow-hidden"
+					>
+						<div class="card-body p-4 p-sm-5">
+							<h5 class="card-title text-center mb-5 fw-light fs-5">
+								Please Input Your Website Link
+							</h5>
+							<form name="WebLink" id="WebLink" method="post">
+								<div class="form-floating mb-3">
+									<input type="text" class="form-control" id="url" name="URL" />
+									<label for="URL">URL (Please Input A Valid URL)</label>
+								</div>
+								<div class="d-grid mb-2">
+									<button
+										class="btn btn-lg btn-login fw-bold text-uppercase"
+										id="loginbutton"
+										type="submit"
+									>
+										Shorten
+									</button>
+									<hr />
+									<!-- Error Message Pop Up -->
+									{% block content %} {% for message in messages %}
+									<div class="form-floating" id="NewLink">
+										<input
+											type="text"
+											class="form-control"
+											id="url"
+											name="URL"
+											readonly="readonly"
+											value="{{message}}"
+										/>
+									</div>
+									{% endfor %} {% endblock %}
+								</div>
+								<a
+									class="d-block text-center mt-2 small"
+									href="{{url_for('logout')}}"
+									id="Logout"
+									>Click here to Log Out</a
+								>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

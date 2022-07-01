@@ -14,8 +14,9 @@ npm install
 
 By doing the steps above, you'll be able to download all the dependencies used in this project at ease
 
-#What do you need prior to using this website?
-You'll need a Bitly account (Fear not, there is a sign up link for you in the website for you to sign up) and an URL that you want to shorten
+# What do you need prior to using this website?
+- You'll need a Bitly account (Fear not, there is a sign up link for you in this project that directs you to a Bitly sign up page)
+- An URL that you want to shorten
 
 ## Feedback
 Please drop any feedback and let me know what I can improve further upon

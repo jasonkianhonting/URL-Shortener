@@ -1,5 +1,5 @@
 # URL-Shortener
-This is a URL- Shortener that I've made to help users of Bitly to shorten their URL with ease and zero hassle. It was inspired by one of the projects that I've done in university which I then elevated it by incorporating Bitly API and include a login functionality as well.
+This is a URL- Shortener that I've made to help users of Bitly to shorten their URL with ease and zero hassle. It was inspired by one of the projects that I've done in university which I then elevated it by incorporating Bitly API and included a login functionality as well.
 
 ## How to install the dependencies
 Firsly, install all the dependencies by:
